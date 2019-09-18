@@ -1,3 +1,4 @@
+import sys
 def update(new): #user defined function to show the updated tic-tac 
       print(new[0:3])
       print(new[3:6])
@@ -28,6 +29,11 @@ while(flag!=0):
      continue
  new[int(p)-1]=int(n) #updating 1d array
  update(new) #calling to print 2d array
+ if (new[0]+new[3]+new[6]==15) or (new[1]+new[4]+new[7]==15) or (new[2]+new[5]+new[8]==15) or (new[0]+new[1]+new[2]==15) or (new[3]+new[4]+new[5]==15) or (new[6]+new[7]+new[8]==15) or (new[0]+new[4]+new[8]==15) or (new[2]+new[4]+new[6]==15):
+  print("Player 1 is the winner\n")
+  flag=0
+  sys.exit()
+  
 
  #################Player 2#############################################
  
@@ -44,8 +50,13 @@ while(flag!=0):
        continue
  new[int(p)-1]=int(n) #updating 1d array
  update(new) #calling to print 2d array
+ if (new[0]+new[3]+new[6]==15) or (new[1]+new[4]+new[7]==15) or (new[2]+new[5]+new[8]==15) or (new[0]+new[1]+new[2]==15) or (new[3]+new[4]+new[5]==15) or (new[6]+new[7]+new[8]==15) or (new[0]+new[4]+new[8]==15) or (new[2]+new[4]+new[6]==15):
+    print("Player 2 is the winner\n")
+    flag=0
+    sys.exit()
 
- 
+
+
 
         
 
